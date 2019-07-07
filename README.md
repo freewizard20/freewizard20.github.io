@@ -9,3 +9,7 @@ Powered by pelican static site generator
 4. `make html` at root directory and you get your static site at /output/(`mingw32-make html` for mingw users)
 5. on `pelicanconf.py`, fill `SITEURL='https://yoursite.github.io/output'`
 6. add the `index.html` file on my root directory
+
+## Pelican custom themes
+* [http://www.pelicanthemes.com/](http://www.pelicanthemes.com/)
+* [Themes download](https://github.com/getpelican/pelican-themes)
