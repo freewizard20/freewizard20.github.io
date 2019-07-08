@@ -1,36 +1,43 @@
 {% extends "base.html" %}
-{% block head %}
-{{ super() }}
-<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
-<meta name="twitter:url" content="{{ SITEURL }}">
-<meta name="twitter:title" content="{{ SITENAME }}">
-<meta name="twitter:description" content="{{ SIDEBAR_DIGEST }}">
-
-<!-- Facebook Meta Data -->
-<meta property="og:title" content="{{ SITENAME }}" />
-<meta property="og:description" content="{{ SIDEBAR_DIGEST }}" />
-<meta property="og:image" content="" />
-{% endblock head %}
 {% block content_title %}{% endblock %}
 {% block content %}
-
 {% if articles %}
-<ol>
-	<h2 class="latest">Latest Posts</h2>
-	{% for article in (articles_page.object_list if articles_page else articles) %}
-	<li class="post_list"><p class="post_entry">
-		<h2 class="post_title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-		<a href="{{ SITEURL }}/{{ article.author.url }}">@{{ article.author }}</a>
-		<span> in </span>
-		<span class="post_category"><a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">[ {{ article.category }} ]</a></span>
-		<span class="post_date">{{ article.locale_date }}</span>
-	</li>
-	{% endfor %}
-</ol>
-{% endif %}
+{% for article in articles %}
+    {% if loop.index == 1 %}
+     <section id="content" class="body">
+        <aside id="featured"><article>
+                <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url
+                }}">{{ article.title }}</a></h1>
+                {% include 'article_infos.html' %}<!-- /.post-info -->
+                {{ article.content }}
+        </article></aside><!-- /#featured -->
+        {% if loop.length  > 1 %}
+                <h1>Other articles</h1>
+                <hr />
+                    <ol id="posts-list" class="hfeed">
+        {% endif %}
+    {% else %}
+        <li><article class="hentry">
+                <header>
+                        <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
+                </header>
 
-{% if articles_page and articles_paginator.num_pages > 1 %}
-{% include 'pagination.html' %}
+                <div class="entry-content">
+                {% include 'article_infos.html' %}<!-- /.post-info -->
+                {{ article.summary }}
+                <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
+                </div><!-- /.entry-content -->
+        </article></li>
+    {% endif %}
+{% endfor %}
+</ol><!-- /#posts-list -->
+</section><!-- /#content -->
+{% else %}
+<section id="content" class="body">
+<h2>Pages</h2>
+{% for page in pages %}
+    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+</section>
 {% endif %}
-
 {% endblock content %}
