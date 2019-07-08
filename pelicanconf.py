@@ -26,8 +26,13 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'https://github.com/freewizard20'),
+            ('twitter', 'https://twitter.com/jeonjinhyuk')
+            )
+
+#SIDEBAR_DIGEST = 'Programmer'
+#FAVICON = 'https://github.com/freewizard20/logo.ico'
+#DISPLAY_PAGES_ON_MENU = True
 
 DEFAULT_PAGINATION = 8
 
