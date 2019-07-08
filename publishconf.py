@@ -19,7 +19,7 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-THEME = "./theme"
+THEME = "C:\\themes\\aboutwilson"
 
 # Following items are often useful when publishing
 
