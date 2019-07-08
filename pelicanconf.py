@@ -30,7 +30,7 @@ SOCIAL = (('github', 'https://github.com/freewizard20'),
             ('twitter', 'https://twitter.com/jeonjinhyuk'),
             )
 
-
+TWITTER_USERNAME = 'JeonJinhyuk'
 SIDEBAR_DIGEST = 'Programmer'
 FAVICON = 'https://github.com/freewizard20/logo.ico'
 DISPLAY_PAGES_ON_MENU = True
