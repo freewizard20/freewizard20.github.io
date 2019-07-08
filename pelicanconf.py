@@ -26,6 +26,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
+<<<<<<< HEAD
 SOCIAL = (('github', 'https://github.com/freewizard20'),
             ('twitter', 'https://twitter.com/jeonjinhyuk'),
             )
@@ -36,6 +37,10 @@ FAVICON = 'https://github.com/freewizard20/logo.ico'
 DISPLAY_PAGES_ON_MENU = True
 
 MENUITEMS = (('Blog','https://freewizard20.github.io/output'),)
+=======
+SOCIAL = (('You can add links in your config file', '#'),
+          ('Another social link', '#'),)
+>>>>>>> parent of 905f068... added social
 
 DEFAULT_PAGINATION = 8
 
