@@ -27,12 +27,15 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/freewizard20'),
-            ('twitter', 'https://twitter.com/jeonjinhyuk')
+            ('twitter', 'https://twitter.com/jeonjinhyuk'),
             )
 
-#SIDEBAR_DIGEST = 'Programmer'
-#FAVICON = 'https://github.com/freewizard20/logo.ico'
-#DISPLAY_PAGES_ON_MENU = True
+
+SIDEBAR_DIGEST = 'Programmer'
+FAVICON = 'https://github.com/freewizard20/logo.ico'
+DISPLAY_PAGES_ON_MENU = True
+
+MENUITEMS = (('Blog','https://freewizard20.github.io/output'),)
 
 DEFAULT_PAGINATION = 8
 
