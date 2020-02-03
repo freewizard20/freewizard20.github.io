@@ -1,0 +1,15 @@
+.dfd-download-buttons,
+#content .dfd-download-buttons,
+#woocommerce #content .dfd-download-buttons{
+    background: url("../img/dfd-file-icon.png") no-repeat scroll 12px 30px #EEEEEE;
+    margin-bottom: 2em;
+    padding: 10px 10px 10px 80px;
+    width: auto;
+}
+
+.dfd-download-buttons .direct-free-download-button,
+#content .dfd-download-buttons .direct-free-download-button,
+#woocommerce #content .dfd-download-buttons .direct-free-download-button {
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
